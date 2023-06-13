@@ -64,6 +64,7 @@ def handle_events():
             if event.key == pygame.K_LEFT:
                 change_to = "LEFT"
 
+
 # create a function that changes the direction of the snake. Be sure to
 # handle double button presses
 
@@ -79,16 +80,34 @@ def change_direction():
     if change_to == "LEFT" and direction != "RIGHT":
         direction = "LEFT"
 
+
 # create a function to move the snake -- the snake body growing mechanism
 # goes here.
 """
-
+spawn_fruit()
+Define the function with no inputs or outputs.
+Access the global variables fruit_position and fruit_spawn.
+Set fruit_position to a list with two elements:
+The first element should be a random integer between 1 and window_x//10 (
+inclusive), multiplied by 10.
+The second element should be a random integer between 1 and window_y//10 (
+inclusive), multiplied by 10.
+Set fruit_spawn to True.
 
 
 """
 
 # create a function to spawn the fruit
 """
+spawn_fruit()
+Define the function with no inputs or outputs.
+Access the global variables fruit_position and fruit_spawn.
+Set fruit_position to a list with two elements:
+The first element should be a random integer between 1 and window_x//10 (
+inclusive), multiplied by 10.
+The second element should be a random integer between 1 and window_y//10 (
+inclusive), multiplied by 10.
+Set fruit_spawn to True.
 
 
 
@@ -96,6 +115,16 @@ def change_direction():
 
 # create a function to draw the snake
 """
+draw_snake()
+Define the function with no inputs or outputs.
+Draw a black rectangle on the game_window using game_window.fill() to clear 
+the previous frame.
+Use a for loop to iterate over each block in snake_body, and draw a green 
+rectangle on game_window using pygame.draw.rect().
+Alternatively, you may want to draw an image of the snake instead of 
+rectangles.
+Draw a white rectangle on game_window using pygame.draw.rect() to represent 
+the fruit.
 
 
 
@@ -104,10 +133,40 @@ def change_direction():
 # create a function to check if the game is over
 
 """
-
+check_game_over()
+Define the function with no inputs or outputs.
+Access the global variables snake_position, window_x, and window_y.
+If the x-coordinate of snake_position is less than 0, or greater than 
+window_x minus 10, call the game_over() function.
+If the y-coordinate of snake_position is less than 0, or greater than 
+window_y minus 10, call the game_over() function.
 
 """
 
 # create a function to check if there is a collision
+"""
+check_collision()
+Define the function with no inputs or outputs.
+Access the global variables snake_body and snake_position.
+Use a for loop to iterate over each block in snake_body except the first one 
+(since the head can't collide with itself).
+If the position of the current block matches the position of snake_position, 
+call the game_over() function.
+
+
+
+"""
 
 # create a function to show the score
+"""
+show_score()
+Define the function with no inputs or outputs.
+Access the global variables score, game_window, and white.
+Create a font object using pygame.font.SysFont().
+Use the render() method on the font object to create a text surface object.
+Use the get_rect() method on the text surface object to get a rectangle that 
+encloses the text.
+Use the blit() method on the game window to display the text surface.
+
+
+"""
