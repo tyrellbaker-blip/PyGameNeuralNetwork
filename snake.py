@@ -153,9 +153,12 @@ def check_game_over():
     global window_x
     global window_y
     if snake_position[1] < 0 | snake_position[1] > (window_y - 10):
-        #game_over()
+        # game_over()
+        pygame.display.set_caption("Game Over Example")
     if snake_position[1] < 0 | snake_position[1] > (window_x - 10):
         # game_over()
+        pygame.display.set_caption("Game Over Example")
+
 # create a function to check if there is a collision
 """
 DONE
@@ -172,7 +175,8 @@ def check_collision():
     global snake_position
     for block in snake_body[1:]:
         if snake_position == snake_position[0]:
-            #game_over()
+            # game_over()
+            pygame.display.set_caption("Game Over Example")
 
 # create a function to show the score
 """
